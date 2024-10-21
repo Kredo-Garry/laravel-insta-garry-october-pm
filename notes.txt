@@ -1,0 +1,48 @@
+PIVOT Table --> category_post
+------------------------------
+post_id                  category_id
+1                            1,3,5  --selected categories for post 1
+2                            3,4,5  -- selected categories for post 2
+
+
+
+
+Posts Table
+------------------------------
+post id                   name/post description
+   1                     I travelled a lot this year! [Travel - 1, Lifestyle - 3, Career - 5]
+   2                     I like to listen to rock music. [3, 4, 5]
+
+Categories Table
+---------------------
+category id                 category name
+1                            Travel
+2                             Food
+3                             Lifestyle
+4                             Technology
+5                             Career
+6                             Movie
+
+1. $all_categories--- get all the categories from the categories table
+2. $selected_categories --- get all the categories for each post
+3. loop over the categories using array() -- to check if the $all_categories is also in the $selected_categories. If that is true, then we will bootstrap clas "checked"
+
+
+**************
+
+SoftDelete -> does not delete the model from the database. It only adds a TIMESTAMP values "deleted_at" column. Put in the "trash" first before permanently deleting it.
+
+To enable soft delete to a table, add a softDeletes() in the migration. This will add the "deleted_at" coumn
+
+http://127.0.0.1:8000/admin/categories
+
+*************************************************
+MIDDLEWARE --- What is middleware? Middleware is mechanism for inspecting and filtering the HTTP request entering the application.
+Think of a middleware as a layer of security that examines the request going through the application.
+
+Our goal here is create our own middleware --> AdminMiddleware this be base on the role_id from the database.
+
+role_id
+
+1 - Admin
+2 - Regular Users
