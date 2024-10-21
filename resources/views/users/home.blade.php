@@ -47,7 +47,7 @@
                     <p class="fw-bold text-secondary">Suggestions For You</p>
                 </div>
                 <div class="col text-end">
-                    <a href="#" class="text-decoration-none fw-bold text-dark">See All Users</a>
+                    <a href="#" class="text-decoration-none fw-bold text-dark">See All</a>
                 </div>
             </div>
 
