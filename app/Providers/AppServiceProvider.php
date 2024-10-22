@@ -33,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
             return $user->role_id === User::ADMIN_ROLE_ID;
         });
 
-        if (config("APP_ENV") === 'production') {
+        if (config('app.env') === 'production') {
             \URL::forceScheme('https');
         }
     }
